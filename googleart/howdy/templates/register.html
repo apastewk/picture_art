@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %}Sign Up Form{% endblock %}
+
+{% block body %}
+
+    <h1>Register for an Account</h1>
+    <br>
+    <form action="/register/" method="POST" role="form">
+        <div class="form-group">
+            <label for="field-firstname">First Name*: </label>
+            <input type="text" name="firstname" placeholder="Enter your first name" id-="field-firstname" required>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="field-lastname">Last Name*: </label>
+            <input type="text" name="lastname" placeholder="Enter your last name" id-="field-lastname" required>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="field-signup-email">Email Address*: </label>
+            <input type="text" name="email" placeholder="Enter your email" id-="field-signup-email" required>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="field-signup-password">Password*: </label>
+            <input type="password" name="password" placeholder="Enter your password" id-="field-signup-password" required>
+        </div>
+        <br>
+        <div class="form-group">
+            <input type="submit" value="Register Now">
+        </div>
+    </form>
+    <p>Already have an account? <a class="login" href="/login/" id="login">Login here</a></p>
+
+    <a href="/">Go back home</a>
+
+{% endblock %}
